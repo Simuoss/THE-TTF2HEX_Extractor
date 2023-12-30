@@ -1,48 +1,47 @@
-<div align="center">
-    <h1> THE —— TTF2HEX_Extractor | MCU Font Extractor </h1>
+<div align= "center">
+    <h1> THE —— TTF2HEX_Extractor | 单片机字库提取器 </h1>
 </div>
 
-<div align="center">  
+<div align= "center">  
     <img src="https://img.shields.io/badge/Version-0.1.0-blue.svg" alt="Version">
     <img src="https://img.shields.io/badge/Build-Passing-green.svg" alt="Build">
     <img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License">
 
 【[简体中文](./README_zh.md)】         【[English](./README.md)】  
-    
-</div>
+</div>  
 
-## 📖 Introduction
+## 📖 介绍
 
-THE —— TTF2HEX_Extractor_MCU Font Extractor is a tool to convert TTF font files into fonts suitable for use on microcontrollers. It converts TTF font files into a C language format header file for microcontroller fonts.
+THE —— TTF2HEX_Extractor_单片机字库提取器是一个可以将ttf字体文件转换为单片机字库的工具。它可以将ttf字体文件转换为单片机字库的C语言格式头文件，以便于在单片机上使用。
 
-The motivation behind developing this software was the desire to display Chinese characters on an OLED screen. Manually inputting HEX one by one for each character was too cumbersome, so the idea was to write software to automatically generate font header files.
+写这个软件的初衷是因为想在oled屏幕上显示中文，而一个一个字码的手动输入HEX实在是太麻烦了，所以就想着写一个软件来自动生成字库头文件。
 
-### 🧰 Features List
+### 🧰 特性列表
 
-- [x] Support for TTF font files
-- [x] Adjustable canvas and font size
-- [x] Support for shifting, rotating, mirroring, and inverting
-- [x] WYSIWYG character preview
-- [x] Progress bar to display the generation progress
-- [x] Output to a .h C language format font header file
-- [ ] Support for more font file formats
-- [ ] Multi-language support
-- [ ] Select fonts from local/network font libraries
-- [ ] Image to HEX conversion
-- [ ] Add auto-fit width and height mode
-- [ ] Custom screen size preview for text to be converted
-- [ ] Add support for mathematical symbols, emojis, etc.
-- [ ] Interface beautification
-- [ ] Code refactoring
+- [x] 支持ttf字体文件  
+- [x] 画幅、字体大小可调
+- [x] 支持位移、旋转、镜像、反色
+- [x] 所见即所得字符预览
+- [x] 进度条显示生成进度
+- [x] 输出为.h的C语言格式字库头文件
+- [ ] 支持更多字体文件格式  
+- [ ] 多语言支持
+- [ ] 从本地/网络字体库选择字体  
+- [ ] 图片转HEX  
+- [ ] 添加自动适配宽高模式
+- [ ] 自定义屏幕尺寸预览待转文字  
+- [ ] 添加数学符号、emoji等选区支持  
+- [ ] 美化界面  
+- [ ] 重构代码 
 
-## ✨ Quick Start
+## ✨ 快速开始
 
-### Usage
-1. Prepare one or more TTF font files; pixel fonts are recommended for better extraction results.
-2. Download the latest **[release](https://github.com/Simuoss/THE-TTF2HEX_Extractor/releases)** version.
-3. Run the **.exe** file, select the font file, set parameters such as font size, canvas size, etc., preview to confirm correctness, and click the **提取字体** button.
+### 使用
+1. 准备一款或多款ttf字体文件，推荐像素字体，提取出来效果比较好
+2. 下载最新的 **[release](https://github.com/Simuoss/THE-TTF2HEX_Extractor/releases)** 版本
+3. 运行 **.exe** 文件，选择字体文件，设置字体大小、画幅大小等参数，预览确认无误后点击 **提取字体** 按钮
    ![img](./readme/使用方法.png)
-4. Export format:
+4. 导出格式：
     ```c
     #ifndef __WENQUANYI_BITMAP_SONG_12PX_TTF_FONT_H__
     #define __WENQUANYI_BITMAP_SONG_12PX_TTF_FONT_H__
@@ -69,19 +68,20 @@ The motivation behind developing this software was the desire to display Chinese
     #endif
     // 提取完成，应提取8个字符，实际提取8个字符，有0个字符不在字体里。
     ```
-    Special thanks to and recommendation of [文泉驿点阵体](https://github.com/AmusementClub/WenQuanYi-Bitmap-Song-TTF), which is used for demonstration. **Pay attention to the LICENSE when using**.
+    这里感谢且安利[文泉驿点阵体](https://github.com/AmusementClub/WenQuanYi-Bitmap-Song-TTF)，演示时使用的字体就是它。**使用时注意LICENSE**。
 
-### Development
-1. Clone the project locally
+### 开发
+1. 克隆项目到本地
     ```shell
     git clone git@github.com:Simuoss/THE-TTF2HEX_Extractor.git
     ```
-2. Open the command line in the directory and install dependencies (mainly Pyslide6)
+2. 在目录打开命令行，安装依赖（主要就是一个Pyslide6）
     ```shell
     pip install -r requirements.txt
     ```
-3. Open the project in your IDE and start development.
-    > **main.py** : Main program entry  
-    >> **extractor.py** : QT interface and interface logic processing  
-    >> **woker.py** : Font extractor  
-    >> **in_font.py** : A function to determine if the font is in the font file
+3. 使用你的IDE打开项目开发即可。
+    > **main.py** : 主程序入口  
+    >> **extractor.py** : QT界面和界面逻辑处理  
+    >> **woker.py** : 字体提取器  
+    >> **in_font.py** : 判断字体是否在字体文件中的一个函数  
+ 
