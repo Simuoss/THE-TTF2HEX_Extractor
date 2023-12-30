@@ -7,7 +7,8 @@
     <img src="https://img.shields.io/badge/Build-Passing-green.svg" alt="Build">
     <img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License">
 
-    [简体中文](README_zh.md) | [English](README.md)
+【[简体中文](README_zh.md)】         【[English](README.md)】  
+    
 </div>
 
 ## 📖 Introduction
